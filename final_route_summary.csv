@@ -1,0 +1,24 @@
+route_name,transport_type,avg_ridership,avg_congestion,avg_speed
+Miyapur - LB Nagar - Miyapur - C1,Metro,443.0,0.0,47.4
+JANGOAN-FM MEMU TRAIN,MMTS_Train,440.0,0.0,47.1
+JBS Parade Ground - MG Bus Station - JBS Parade Ground - C2,Metro,435.0,0.0,46.6
+UR-SC DEMU,MMTS_Train,431.0,0.0,47.2
+HYB-FM,MMTS_Train,428.0,0.0,47.4
+FM-MED DEMU,MMTS_Train,426.0,0.0,47.1
+SC-UR DEMU,MMTS_Train,423.0,0.0,46.8
+FM-SC,MMTS_Train,422.0,0.0,47.0
+FM-LPI,MMTS_Train,420.0,0.0,47.0
+BMO-FM DEMU,MMTS_Train,419.0,0.0,47.3
+FM-UR DEMU,MMTS_Train,419.0,0.0,47.1
+HYB-LPI,MMTS_Train,418.0,0.0,47.0
+LPI-FM,MMTS_Train,418.0,0.0,46.9
+LPI-HYB,MMTS_Train,417.0,0.0,47.1
+SC-FM,MMTS_Train,416.0,0.0,47.3
+Nagole - Raidurg - Nagole - C3,Metro,415.0,0.0,47.2
+MED-FM DEMU,MMTS_Train,414.0,0.0,47.2
+UR-FM DEMU,MMTS_Train,413.0,0.0,47.6
+FM-HYB,MMTS_Train,412.0,0.0,46.9
+FM-JANGAON  MEMU TRAIN,MMTS_Train,412.0,0.0,47.4
+BHONGIR-FM MEMU,MMTS_Train,408.0,0.0,47.0
+SC-HYB,MMTS_Train,407.0,0.0,47.3
+LPI-SC,MMTS_Train,406.0,0.0,47.2
