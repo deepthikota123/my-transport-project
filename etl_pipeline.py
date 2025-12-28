@@ -56,9 +56,9 @@ def setup_database():
     try:
         with engine.connect() as conn:
             conn.execute(text(f"CREATE DATABASE IF NOT EXISTS {DB_CONFIG['database']}"))
-            print(f"✅ Database '{DB_CONFIG['database']}' checked/created.")
+            print(f" Database '{DB_CONFIG['database']}' checked/created.")
     except Exception as e:
-        print(f"❌ Database Setup Failed: {e}")
+        print(f" Database Setup Failed: {e}")
         print("   Ensure XAMPP/MySQL is running.")
         exit()
 
@@ -67,7 +67,7 @@ def extract_data():
     print("\n--- STEP 1: EXTRACTION ---")
     
     if not os.path.exists(CSV_FILE) or not os.path.exists(JSON_FILE):
-        print("❌ Error: Input files missing.")
+        print(" Error: Input files missing.")
         exit()
 
     df_usage = pd.read_csv(CSV_FILE)
@@ -125,9 +125,9 @@ def load_to_mysql(df):
                 index=False,
                 chunksize=5000  
             )
-        print(f"✅ Successfully inserted {len(df)} rows into MySQL.")
+        print(f" Successfully inserted {len(df)} rows into MySQL.")
     except Exception as e:
-        print(f"❌ Load Failed: {e}")
+        print(f" Load Failed: {e}")
 
 # STEP 4: REPORT
 def create_summary_report():
@@ -146,13 +146,13 @@ def create_summary_report():
     try:
         df = pd.read_sql(query, engine)
         if df.empty:
-            print("⚠️ Warning: Query returned 0 rows.")
+            print(" Warning: Query returned 0 rows.")
         else:
             df.to_csv(SUMMARY_OUTPUT, index=False)
-            print(f"✅ CSV Generated: {os.path.abspath(SUMMARY_OUTPUT)}")
+            print(f" CSV Generated: {os.path.abspath(SUMMARY_OUTPUT)}")
             print(df.head())
     except Exception as e:
-        print(f"❌ Report Failed: {e}")
+        print(f" Report Failed: {e}")
 
 if __name__ == "__main__":
     setup_database()
@@ -163,4 +163,5 @@ if __name__ == "__main__":
         load_to_mysql(clean_data)
         create_summary_report()
     else:
+
         print("❌ Transformation resulted in empty dataset.")
